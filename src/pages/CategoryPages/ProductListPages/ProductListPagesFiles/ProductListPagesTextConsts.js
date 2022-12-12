@@ -1,3 +1,5 @@
+//Consts for product page
+
 export const PRODUCT_LIST_PAGES_TEXT_CONSTS = {
   PRODUCT_PAGE: {
     REVIEW: "What other schmucks think: ",

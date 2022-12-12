@@ -29,6 +29,7 @@ export const HomePage = () => {
           <HomePageH1>{HOMEPAGE_TEXT_CONSTS.HOMEPAGE_TITLE}</HomePageH1>
         </StyledProductShowcase>
         <FeaturedProducts>
+          {/* Displays items based on what rating they have */}
           {data.map((item, index) => {
             if (item.rating.rate >= 4) {
               return (

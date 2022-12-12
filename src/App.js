@@ -20,6 +20,7 @@ function App() {
   const [error, setError] = useState();
   const [data, setData] = useState("");
   const [cart, setCart] = useState([]);
+  //Gets data
   const getData = () => {
     axios
       .get("https://fakestoreapi.com/products")

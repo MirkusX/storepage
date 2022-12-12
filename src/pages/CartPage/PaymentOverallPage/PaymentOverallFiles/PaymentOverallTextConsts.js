@@ -1,3 +1,5 @@
+//Consts for payment page
+
 export const PAYMENT_OVERALL = {
   PAYMENT: {
     //top to bottom

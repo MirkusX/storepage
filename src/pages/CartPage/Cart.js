@@ -4,27 +4,25 @@ import {
   CartContainer,
   CartSection,
   ErrorText,
-  HomePageH1,
   LinkTo,
   WhiteP,
 } from "../../components/StyledComponents";
 import { CartContext } from "../PageFiles/ProductContext";
-import { Route, Routes } from "react-router-dom";
-import { Payment } from "./PaymentOverallPage/Payment";
-import { PaymentOverall } from "./PaymentOverall";
 import { CARTPAGE_TEXT } from "./CartPageFiles/CartPageTextConsts";
 
 export const CartBox = () => {
   const { CART } = CARTPAGE_TEXT;
   const [poor, poorCheck] = useState(true);
+  //Function for removing items from cart
   const removeItem = (index) => {
     const removeList = [...cart];
     removeList.splice(index, 1);
     setCart(removeList);
   };
   const { cart, setCart } = useContext(CartContext);
+  //Sums price of every item in cart then adds it all together
   const sum = Object.values(cart).reduce((a, b) => a + b.price, 0);
-  console.log(sum);
+  //Checks if cart is empty
   useEffect(() => {
     if (cart.length > 0) {
       poorCheck(!poor);
@@ -36,6 +34,7 @@ export const CartBox = () => {
   console.log(cart);
   return (
     <CartSection items>
+      {/* Displays items in cart array */}
       {cart.map((item, index) => {
         return (
           <CartContainer>

@@ -1,6 +1,5 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
-  ArticleSection,
   CartSection,
   HomePageH1,
   LinkTo,
@@ -11,6 +10,7 @@ import { PAYMENT_OVERALL } from "./PaymentOverallFiles/PaymentOverallTextConsts"
 
 export const Processing = () => {
   const { PROCESSING } = PAYMENT_OVERALL;
+  //Loading messages for processing
   const LoadingMessages = [
     "Transferring money to tax haven",
     "Enemies die faster if you damage them",
@@ -23,19 +23,20 @@ export const Processing = () => {
     "Entering the Survival Horror",
     "[Door slowly opening]",
   ];
-  const { cart, setCart } = useContext(CartContext);
+  const { setCart } = useContext(CartContext);
   const [message, setMessage] = useState("");
   const [hide, setHide] = useState(false);
+  //Randomizes loading messages
   const randomizeMessage = () => {
     setMessage(
       LoadingMessages[Math.floor(Math.random() * LoadingMessages.length)]
     );
   };
-
+  //Sets message to complete
   const complete = () => {
     setMessage("Complete!");
   };
-
+  //Displays different message every half second, display "complete" after eight seconds and clears cart
   useEffect(() => {
     const timerMessage = setInterval(() => {
       randomizeMessage();
@@ -48,8 +49,6 @@ export const Processing = () => {
     }, 8000);
     return;
   }, []);
-
-  console.log(message);
   return (
     <CartSection items>
       <Loader hide={hide} />

@@ -1,3 +1,5 @@
+//Consts for category pages
+
 export const CATEGORY_PAGES_TEXT = {
   CATEGORY_TUTORIAL: {
     TITLE: "Click on a category to continue browsing and spending",

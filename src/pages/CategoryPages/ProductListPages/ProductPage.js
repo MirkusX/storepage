@@ -7,7 +7,6 @@ import {
   FAQLi,
   ProductH1,
   ProductInfo,
-  StyledH2,
   StyledProductImage,
   StyledProductInner,
   StyledProductShowcase,
@@ -22,10 +21,10 @@ export const ProductPage = () => {
   const { cart, setCart } = useContext(CartContext);
   const [show, setShow] = useState(false);
   const { data } = useContext(ProductContext);
-  console.log(data);
   const { id } = useParams();
+  //Gets id and corrects it
   const actualId = id - 1;
-  console.log(data);
+  //Function for adding item to cart
   const addToCart = () => {
     setCart([
       ...cart,
@@ -33,6 +32,7 @@ export const ProductPage = () => {
     ]);
     setShow(!show);
   };
+  //Displays "added to cart" if user adds item to cart and hides it if user goes on another product page
   useEffect(() => {
     if (setShow(true)) {
       setShow(false);

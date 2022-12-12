@@ -1,3 +1,5 @@
+//Conts for cart
+
 export const CARTPAGE_TEXT = {
   CART: {
     CLEAR: "Clear",

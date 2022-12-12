@@ -1,3 +1,5 @@
+//Consts for category and reviews to be used on product pages
+
 export const CATEGORY_DESC = {
   electronics:
     "Middling hardware at outrageous prices, no one will buy these anymore since people would rather spend money on food. Get these before the EU power regulations kick in!",

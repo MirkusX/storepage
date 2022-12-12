@@ -16,7 +16,7 @@ export const Categories = () => {
   const { data } = useContext(ProductContext);
 
   const uniqueCategory = [];
-
+  //Filters items based on category
   if (data) {
     const unique = data.filter((e) => {
       const duplicate = uniqueCategory.includes(e.category);
@@ -29,6 +29,7 @@ export const Categories = () => {
     return (
       <>
         <FeaturedProducts>
+          {/* Displays each category link */}
           {uniqueCategory.map((item, index) => {
             return (
               <>

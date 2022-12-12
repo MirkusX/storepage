@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
+//Styling
+
 export const StyledTitleContainer = styled.div`
   background: #e63946;
   transform: skew(10deg);

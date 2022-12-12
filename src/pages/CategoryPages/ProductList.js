@@ -30,6 +30,7 @@ export const ProductList = () => {
           <Routes>
             <Route path=":category/:title/:id" element={<ProductPage />} />
           </Routes>
+          {/* For listing out items */}
           {data.map((item, index) => {
             if (item.category == category)
               return (

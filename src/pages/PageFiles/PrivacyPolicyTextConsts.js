@@ -1,3 +1,5 @@
+//Joke privacy policy text const
+
 export const PRIVACY_POLICY = {
   TITLE: "Privacy Policy",
   SECTION_ONE:

@@ -14,6 +14,7 @@ export const Payment = () => {
   const { PAYMENT } = PAYMENT_OVERALL;
   const { MMYY } = PAYMENT_OVERALL.PAYMENT;
   const navigate = useNavigate();
+  //Navigates to processing without using link so submit can check if all fields are valid
   const proceed = () => {
     navigate("/cart/PaymentOverall/Processing");
   };

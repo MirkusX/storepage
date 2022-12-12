@@ -1,3 +1,5 @@
+//About page text consts
+
 export const GIMMIE_TEXT_CONSTS = {
   TITLE: "Simple Slogan, No BS",
   ARTICLE_FIRST:
