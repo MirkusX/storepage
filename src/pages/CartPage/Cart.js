@@ -23,26 +23,38 @@ export const CartBox = () => {
   //Sums price of every item in cart then adds it all together
   const sum = Object.values(cart).reduce((a, b) => a + b.price, 0);
   //Checks if cart is empty
-  <CartSection items>
-    {/* Displays items in cart array */}
-    {cart.map((item, index) => {
-      return (
-        <CartContainer key={index}>
-          <WhiteP>
-            {item.title} | £{item.price}
-          </WhiteP>
-          <AddToCart delete onClick={() => removeItem(index)}>
-            {CART.CLEAR}
-          </AddToCart>
-        </CartContainer>
-      );
-    })}
-    <WhiteP>
-      {CART.SUM}
-      {sum}
-    </WhiteP>
-    <LinkTo to="/cart/PaymentOverall">
-      <AddToCart>{CART.CHECKOUT}</AddToCart>
-    </LinkTo>
-  </CartSection>;
+  useEffect(() => {
+    if (cart.length > 0) {
+      poorCheck(!poor);
+    } else {
+      poorCheck(poor);
+    }
+  }, [cart]);
+
+  console.log(cart);
+  return (
+    <CartSection items>
+      {/* Displays items in cart array */}
+      {cart.map((item, index) => {
+        return (
+          <CartContainer>
+            <WhiteP key={index}>
+              {item.title} | £{item.price}
+            </WhiteP>
+            <AddToCart delete onClick={() => removeItem(index)}>
+              {CART.CLEAR}
+            </AddToCart>
+          </CartContainer>
+        );
+      })}
+      <WhiteP>
+        {CART.SUM}
+        {sum}
+      </WhiteP>
+      <LinkTo to="/cart/PaymentOverall" disabled={poor}>
+        <AddToCart>{CART.CHECKOUT}</AddToCart>
+        <ErrorText hide={!poor}>{CART.ERROR_MESSAGE}</ErrorText>
+      </LinkTo>
+    </CartSection>
+  );
 };
