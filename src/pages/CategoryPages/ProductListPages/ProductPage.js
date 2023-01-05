@@ -54,6 +54,7 @@ export const ProductPage = () => {
               {PRODUCT_PAGE.REVIEW}
               {data[actualId].rating.rate}/5
             </WhiteP>
+            <WhiteP>{data[actualId].rating.count} reviews</WhiteP>
             <AddToCart onClick={() => addToCart()}>
               {PRODUCT_PAGE.ADD}
               {data[actualId].price}

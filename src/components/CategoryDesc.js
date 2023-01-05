@@ -69,5 +69,8 @@ export const CATEGORY_DESC = {
 
     "DANVOUY Womens T Shirt Casual Cotton Short":
       "pinkfighter - ANOTHER PURPLE COLORED CLOTHING!? WHY NO PINK I NEED PINK TO FIGHT.",
+
+    "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s":
+      "megagamer69 - 1tb of hot shit coming fast",
   },
 };

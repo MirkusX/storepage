@@ -32,11 +32,11 @@ export const Categories = () => {
           {/* Displays each category link */}
           {uniqueCategory.map((item, index) => {
             return (
-              <>
-                <LinkTo category="true" key={index} to={item}>
+              <div key={index}>
+                <LinkTo category="true" to={item}>
                   {item.toUpperCase()}
                 </LinkTo>
-              </>
+              </div>
             );
           })}
         </FeaturedProducts>

@@ -68,7 +68,7 @@ export const AddToCart = styled.button`
   background-color: green;
   border-radius: 3px;
   font-family: inherit;
-  margin: 1em;
+  margin: 0 1em 1em 0;
   &:hover {
     background-color: darkgreen;
   }

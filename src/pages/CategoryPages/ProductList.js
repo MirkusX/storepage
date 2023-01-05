@@ -5,7 +5,6 @@ import {
   FeaturedImg,
   FeaturedProducts,
   LinkTo,
-  Space,
   StyledH2,
   StyledHomeDiv,
   StyledProductShowcase,
@@ -36,11 +35,16 @@ export const ProductList = () => {
               return (
                 <StyledHomeDiv key={index} id={item.id}>
                   <LinkTo
-                    to={item.category + "/" + item.title + "/" + item.id}
+                    to={
+                      item.category +
+                      "/" +
+                      item.title.replace("/", " ") +
+                      "/" +
+                      item.id
+                    }
                     onClick={() =>
                       window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
+                        top: 250,
                       })
                     }
                   >
