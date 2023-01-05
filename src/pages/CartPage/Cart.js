@@ -30,8 +30,6 @@ export const CartBox = () => {
       poorCheck(poor);
     }
   }, [cart]);
-
-  console.log(cart);
   return (
     <CartSection items>
       {/* Displays items in cart array */}
